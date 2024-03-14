@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+.navbar, .homepage {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    background-color: #4bc6dc;
+}
+
+.calc-color{
+  background-color: #ff5a37;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px;
+}
+
+p, label {
+   font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, h2 {
+    color: black;
+}

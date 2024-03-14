@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% macro render_field(field, placeholder='') %}
+    {% if field.id == 'prob_a' %}
+        {{ field(placeholder="Enter the first probability: ", style="width: 400px") }}<br><br>
+    {% elif field.id == 'prob_b' %}
+        {{ field(placeholder="Enter the second probability: ", style="width: 400px") }}<br><br>
+    {% else %}
+        {{ field(placeholder=placeholder) }}<br><br>
+    {% endif %}
+    {% if field.errors %}
+        <ul class="errors">
+            {% for error in field.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endmacro %}
+
+{% block content %}
+    <section style="min-height: 100vh; background-color: #30c1ff">
+        <div class="container py-md-5 h-100">
+            <div class="row d-flex justify-content-center align-items-left h-100">
+                <div class="col col-lg-9 col-xl-7">
+                    <div class="card rounded-3  calc-color">
+                        <div class="card-body p-4">
+                            <h2>Adding probabilities calculator</h2>
+                            <form action="/adding" method="POST" novalidate>
+                                {{ form.csrf_token }}
+                                {{ render_field(form.prob_a.label) }}
+                                {{ render_field(form.prob_a) }}
+                                {{ render_field(form.prob_b.label) }}
+                                {{ render_field(form.prob_b) }}
+                                {{ render_field(form.submit) }}
+                            </form>
+                            <br>
+                            <h3>Result is : {{ result }}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

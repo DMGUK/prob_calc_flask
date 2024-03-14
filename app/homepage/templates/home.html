@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="homepage">
+        <section class="jumbotron text-center mt-5">
+            <h1 class="display-4">Welcome to Probability Calculator</h1>
+        </section>
+        <section class="row mt-5">
+            <div class="container py-md-5 h-100">
+                <div class="row d-flex justify-content-center align-items-left h-100">
+                    <div class="col col-lg-9 col-xl-7">
+                        <div class="card rounded-3  calc-color">
+                            <div class="card-body p-4">
+                                <center><h2><a href = "{{ url_for('calc.adding') }}">Adding</a> / <a href = "{{ url_for('calc.multiplying') }}">Multiplying</a> Probabilities</h2></center>
+                                <p>This calculator allows users to input probabilities and perform basic arithmetic operations like addition and multiplication on them. For instance, users might input probabilities of different events, and the calculator would compute the combined probability of certain combinations of these events.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row mt-5">
+            <div class="container py-md-5 h-100">
+                <div class="row d-flex justify-content-center align-items-left h-100">
+                    <div class="col col-lg-9 col-xl-7">
+                        <div class="card rounded-3  calc-color">
+                            <div class="card-body p-4">
+                                <center><h2><a href = "{{ url_for("calc.full_prob") }}">Full probability</a></h2>
+                                    <p>This calculator computes the probability of an event happening given all possible outcomes.
+                                    In probability theory, the full probability typically refers to the sum of the probabilities of all possible outcomes of an experiment,
+                                        which is usually 1.</p></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row mt-5">
+            <div class="container py-md-5 h-100">
+                <div class="row d-flex justify-content-center align-items-left h-100">
+                    <div class="col col-lg-9 col-xl-7">
+                        <div class="card rounded-3  calc-color">
+                            <div class="card-body p-4">
+                                <center><h2><a href = "{{ url_for('calc.single_event') }}">Probability of at least one event</a></h2>
+                                <p>This calculator calculates the probability of at least one of several events occurring.
+                                It could be useful in scenarios where there are multiple possible outcomes,
+                                and the user wants to know the likelihood of at least one of these outcomes happening.</p>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row mt-5">
+            <div class="container py-md-5 h-100">
+                <div class="row d-flex justify-content-center align-items-left h-100">
+                    <div class="col col-lg-9 col-xl-7">
+                        <div class="card rounded-3  calc-color">
+                            <div class="card-body p-4">
+                                <center>
+                                <h2><a href = "{{ url_for('calc.bayes') }}">Bayes' formula</a></h2>
+                                <p>Bayes' formula, or Bayes' theorem, is a fundamental theorem in probability theory that describes how to update the probability of a hypothesis given evidence.
+                                This calculator involves users inputting prior probabilities and conditional probabilities to compute posterior probabilities based on new evidence.</p>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
