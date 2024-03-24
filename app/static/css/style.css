@@ -5,11 +5,15 @@
 }
 
 body{
-    background-color: #4bc6dc;
+    background-color: #ece67e;
+}
+
+.bg-gradient{
+    background-color: #4CB963;
 }
 
 .calc-color{
-  background-color: #ff5a37;
+  background-color: #ee7674;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 14px;
 }
